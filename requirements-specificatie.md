@@ -575,7 +575,7 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 ```
 ┌─────────────────────────────────────────────┐
 │                                             │
-│         DE CACAODROOM – BI Portal        │
+│            DE CACAODROOM – BI Portal        │
 │                                             │
 │         ┌────────────────────────────┐      │
 │         │   Gebruikersnaam           │      │
@@ -585,7 +585,7 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 │         │   Wachtwoord               │      │
 │         └────────────────────────────┘      │
 │                                             │
-│         [        Inloggen           ]       │
+│         [          Inloggen          ]      │
 │                                             │
 │         Wachtwoord vergeten?                │
 │                                             │
