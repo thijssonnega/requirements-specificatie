@@ -3,7 +3,7 @@
 
 ---
 
-**Teamnaam:** De Cacaodroom  
+**Team:** De Cacaodroom  
 **Teamleden:** Thijs Sonnega (CEO), Noah de Deugd (CFO), Dien Ahouaoui (COO), Samir Mafuzur Rahman (CMO), Zakaria Ouzlig (CHMO), Ouail Haddouch  
 **Opleiding:** HBO-ICT – 1e jaar, 2e semester  
 **Klas:** 2025_TICT-BV1SE2-23_3_V  
@@ -29,21 +29,21 @@
 
 ### 1.1 Bedrijfsprofiel
 
-**De Cacaodroom** is een snelgroeiend premium chocoladebedrijf dat actief is op de internationale markt voor zoetwaren. Het bedrijf verkoopt chocoladeproducten aan supermarkten, groothandels en speciaalzaken. De focus ligt op kwaliteit, bijzondere smaken en een luxe uitstraling.
+**De Cacaodroom** is een snelgroeiend premium chocoladebedrijf dat actief is op de internationale markt voor chocolade. Het bedrijf verkoopt chocoladeproducten aan supermarkten, groothandels en speciaalzaken. De focus ligt op kwaliteit, bijzondere smaken en een luxe uitstraling.
 
-Het bedrijf heeft recent een ERP- en CRM-systeem geïmplementeerd in **Odoo**, waardoor operationele processen zijn verbeterd. De volgende stap is het implementeren van een **Business Intelligence (BI)-dashboard** dat datagedreven besluitvorming mogelijk maakt voor het management en alle afdelingen.
+Het bedrijf heeft recent een ERP- en CRM-systeem geïmplementeerd in **Odoo**, waardoor operationele processen zijn verbeterd. De volgende stap is het implementeren van een **Business Intelligence (BI)-dashboard** dat datagedreven besluitvorming mogelijk maakt voor het management en alle afdelingen binnen het bedrijf.
 
 ---
 
 ### 1.2 Missie
 
-> "De Cacaodroom heeft als missie om mensen te laten genieten van de puurste chocoladebeleving. We creëren producten die niet alleen de smaakpapillen verwennen, maar ook de ziel. Door ambachtelijke bereidingen en eerlijke, hoogwaardige ingrediënten willen we onze klanten een ervaring bieden die hen terugbrengt naar de essentie van chocolade."
+> "De Cacaodroom heeft als missie om mensen te laten genieten van onze chocoladebeleving. We creëren producten die niet alleen de smaakpapillen verwennen, maar ook het lichaam. Door ambachtelijke bereidingen en duurzame ingrediënten willen we onze klanten een ervaring bieden die hen terugbrengt naar de oorsprong van chocolade."
 
 ---
 
 ### 1.3 Visie
 
-> "Onze visie is om de beste chocolademakerij te zijn, waar smaak, kwaliteit en ethiek hand in hand gaan. We streven ernaar om chocolade te produceren die niet alleen uitzonderlijk lekker is, maar ook bijdraagt aan een duurzamere wereld."
+> "Onze visie is om de beste chocolade fabriek te zijn, waar smaak, kwaliteit en ethiek hand in hand gaan. We streven ernaar om chocolade te produceren die niet alleen uitzonderlijk lekker is, maar ook bijdraagt aan een duurzamere wereld."
 
 ---
 
@@ -53,7 +53,7 @@ Het bedrijf heeft recent een ERP- en CRM-systeem geïmplementeerd in **Odoo**, w
 |---|---|
 | **Ambachtelijkheid** | Respect voor traditie en lokale productie |
 | **Duurzaamheid** | Samenwerking met eerlijke leveranciers, milieuvriendelijk proces |
-| **Kwaliteit** | Allerbeste ingrediënten voor een ongeëvenaarde smaak |
+| **Kwaliteit** | Allerbeste ingrediënten voor een onvergetelijke smaak |
 | **Innovatie** | Constant op zoek naar nieuwe smaken en combinaties |
 | **Passie** | Liefde voor chocolade in elke stap van het proces |
 
@@ -74,16 +74,16 @@ De volgende SMART-doelstellingen zijn opgesteld voor de BI-implementatie:
 ### 1.6 Organogram
 
 ```
-                    DE CACAODROOM
-                         |
+                  DE CACAODROOM
+                        |
                   Thijs Sonnega
-                      CEO
-          ______________|_______________
-         |        |         |      |        |
-    Noah de    Dien      Samir   Zakaria  Ouail
-     Deugd   Ahouaoui   Mafuzur  Ouzlig  Haddouch
-      CFO      COO     Rahman    CHMO
-                        CMO
+                       CEO
+          ______________|________________________
+          |        |         |         |        |
+       Noah de    Dien      Samir   Zakaria  Ouail
+       Deugd      Ahouaoui  Mafuzur Ouzlig   Haddouch
+         CFO      COO       Rahman   CHMO      
+                            CMO
 ```
 
 **Rollen:**
@@ -132,7 +132,7 @@ Het BI-dashboardsysteem kent de volgende actoren (gebruikersrollen):
 
 ### 3.1 Ist-Situatie (Huidige Situatie – As Is)
 
-De huidige situatie van De Cacaodroom kenmerkt zich door ernstige datasilo's en inefficiënties:
+De huidige situatie van De Cacaodroom ergert zich nu door alle losse data en dat het niet efficiënt werkt:
 
 #### Verkoop & Orderverwerking
 Bestellingen komen binnen via mail, telefoon en vertegenwoordigers die orders noteren in eigen Excel-bestanden. Iedere medewerker heeft zijn eigen aanpak, waardoor versies door elkaar lopen en orders verloren gaan of dubbel worden verwerkt.
@@ -202,7 +202,7 @@ Na implementatie van het BI-dashboardsysteem:
 
 ---
 
-### 4.2 Product Vision Board (Roman Pichler)
+### 4.2 Product Vision Board
 
 | Sectie | Inhoud |
 |---|---|
