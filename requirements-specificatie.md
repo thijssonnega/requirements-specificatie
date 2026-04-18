@@ -515,47 +515,47 @@ De onderstaande sitemap toont de structuur van het BI-dashboardsysteem:
 ```
 BI-DASHBOARD SYSTEEM – DE CACAODROOM
 │
-├── 🔐 Login
+├── Login
 │   └── Inlogscherm (gebruikersnaam + wachtwoord)
 │
-├── 🏠 Home / Startscherm
+├── Startscherm
 │   └── Persoonlijk welkomstscherm met snelkoppelingen
 │
-├── 📊 Management Dashboard
+├── Management Dashboard
 │   ├── Bedrijfsbreed KPI-overzicht
 │   ├── Trendanalyse (grafieken per periode)
 │   └── Export managementrapportage (PDF / Excel)
 │
-├── 💰 Financieel Dashboard
+├── Financieel Dashboard
 │   ├── Marge per productlijn
 │   ├── Marge per klantsegment
 │   ├── Cashflow overzicht
 │   └── Openstaande facturen & betalingsstatus
 │
-├── 🏭 Productie & Voorraad Dashboard
+├── Productie & Voorraad Dashboard
 │   ├── Productieverspilling per batch
 │   ├── Productieprestatie (output per uur, afgekeurde batches)
 │   ├── Doorlooptijd per order
 │   ├── Voorraadinzicht (actueel, minimummelding)
 │   └── Leverbetrouwbaarheid per leverancier
 │
-├── 📈 Verkoop & Marketing Dashboard
+├── Verkoop & Marketing Dashboard
 │   ├── Campagne-effectiviteit per klantsegment
 │   ├── Omzet per periode (dag / week / maand / kwartaal)
 │   ├── Seizoenspieken & verkoopprognose
 │   └── Klantenwinstgevendheid (marge per klant)
 │
-├── 🎧 Klantenservice Dashboard
+├── Klantenservice Dashboard
 │   ├── Klachtenoverzicht (categorie, volume, trend)
 │   ├── Gemiddelde responstijd
 │   └── Klanttevredenheidsscore
 │
-├── 🌱 Duurzaamheid Dashboard
+├── Duurzaamheid Dashboard
 │   ├── CO₂-uitstoot per batch
 │   ├── Energieverbruik per maand
 │   └── Retourpercentage per productlijn
 │
-└── ⚙️ Beheer (alleen IT-beheerder)
+└── Beheer (alleen IT-beheerder)
     ├── Gebruikersbeheer (aanmaken, rollen, rechten)
     ├── Databronbeheer (Odoo-koppeling, import Excel/CSV)
     ├── Alertinstellingen (drempelwaarden)
@@ -575,7 +575,7 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 ```
 ┌─────────────────────────────────────────────┐
 │                                             │
-│         🍫 DE CACAODROOM – BI Portal        │
+│         DE CACAODROOM – BI Portal        │
 │                                             │
 │         ┌────────────────────────────┐      │
 │         │   Gebruikersnaam           │      │
@@ -597,8 +597,8 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 ### Wireframe 2 – Management Dashboard (Startscherm)
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│  🍫 De Cacaodroom BI     [Management]         [Logout]  [⚙️]    │
+───────────────────────────────────────────────────────────────────
+│  De Cacaodroom BI     [Management]         [Logout]  [Settings]  │
 ├──────────────────────────────────────────────────────────────────┤
 │  Navigatie: [Home] [Financieel] [Productie] [Verkoop] [Service]  │
 ├──────────┬──────────┬──────────┬──────────┬──────────────────────┤
@@ -607,17 +607,17 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 │ €128.000 │  8,2% ▼  │  7,4/10  │  12 st.  │                      │
 │   ▲ +5%  │          │   ▲ +3%  │  ▼ -2    │                      │
 ├──────────┴──────────┴──────────┴──────────┴──────────────────────┤
-│                                                                    │
-│   OMZETTREND – afgelopen 12 maanden                               │
-│   ┌───────────────────────────────────────────────────────┐       │
-│   │  📈  [grafiek: lijndiagram omzet per maand]           │       │
-│   └───────────────────────────────────────────────────────┘       │
-│                                                                    │
-│   TOP PRODUCTEN (marge)          ALERTS                           │
-│   1. Karamel-Zeezout   28%      ⚠️ Suiker: voorraad = -50        │
-│   2. Pure Tablet       24%      ⚠️ Factuur #1042: 35 dagen open  │
-│   3. Melk Uitdeel      19%      ✅ Productie binnen target        │
-│                                                                    │
+│                                                                  │
+│   OMZETTREND – afgelopen 12 maanden                              │
+│   ┌───────────────────────────────────────────────────────┐      │
+│   │   [grafiek: lijndiagram omzet per maand]              |      │
+│   └───────────────────────────────────────────────────────┘      │
+│                                                                  │
+│   TOP PRODUCTEN (marge)          ALERTS                          │
+│   1. Karamel-Zeezout   28%      - Suiker: voorraad = -50         │
+│   2. Pure Tablet       24%      - Factuur #1042: 35 dagen open   │
+│   3. Melk Uitdeel      19%      + Productie binnen target        │
+│                                                                  │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
@@ -626,12 +626,12 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 ### Wireframe 3 – Financieel Dashboard
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│  🍫 De Cacaodroom BI     [CFO - Noah]              [Logout]      │
+┌───────────────────────────────────────────────────────────────────
+│  De Cacaodroom BI     [CFO - Noah]              [Logout]         │
 ├──────────────────────────────────────────────────────────────────┤
-│  > Financieel Dashboard                                           │
+│  > Financieel Dashboard                                          │
 ├──────────────────────────────────────────────────────────────────┤
-│  Filter: [Periode ▾]  [Productlijn ▾]  [Klantsegment ▾]         │
+│  Filter: [Periode]        [Productlijn]         [Klantsegment]   │
 ├──────────────────────────┬───────────────────────────────────────┤
 │  MARGE PER PRODUCTLIJN   │  CASHFLOW (12 maanden)                │
 │  ┌──────────────────────┐│  ┌───────────────────────────────┐    │
@@ -640,11 +640,11 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 │  │ Melk:      19%       │├───────────────────────────────────────┤
 │  │ Karamel:   28%       ││  OPENSTAANDE FACTUREN                 │
 │  └──────────────────────┘│  Totaal: €24.300                      │
-│                           │  > 30 dagen: 3 facturen (⚠️ alert)   │
+│                          │  > 30 dagen: 3 facturen (alert)       │
 │  MARGE PER KLANTSEGMENT  │  Gemiddelde betalingstermijn: 22 dgn  │
-│  Supermarkt:  22%        │                                        │
+│  Supermarkt:  22%        │                                       │
 │  Groothandel: 18%        │  [Exporteer rapport]                  │
-│  Speciaalzaak: 31%       │                                        │
+│  Speciaalzaak: 31%       │                                       │
 └──────────────────────────┴───────────────────────────────────────┘
 ```
 
@@ -654,23 +654,23 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│  🍫 De Cacaodroom BI     [COO - Dien]              [Logout]      │
+│  De Cacaodroom BI     [COO - Dien]              [Logout]         │
 ├──────────────────────────────────────────────────────────────────┤
-│  > Productie & Voorraad Dashboard                                 │
+│  > Productie & Voorraad Dashboard                                │
 ├──────────────────────────────────────────────────────────────────┤
 │  VERSPILLING PER BATCH          VOORRAAD ALERTS                  │
-│  ┌───────────────────────────┐  ⚠️ Chocoladetablet:  voorraad 0  │
-│  │ [staafdiagram per batch]  │  ⚠️ Suiker:           -50 (tekort)│
-│  │ Batch #21: 6,2% verspild  │  ✅ Karamel-Zeezout: 2500 (hoog) │
-│  │ Batch #22: 4,1% verspild  │                                    │
-│  │ Batch #23: 8,8% ⚠️ hoog   │  VOORRAADINZICHT                 │
+│  ┌───────────────────────────┐  - Chocoladetablet:  voorraad 0   │
+│  │ [staafdiagram per batch]  │  - Suiker:           -50 (tekort) │
+│  │ Batch #21: 6,2% verspild  │  + Karamel-Zeezout: 2500 (hoog)   │
+│  │ Batch #22: 4,1% verspild  │                                   │
+│  │ Batch #23: 8,8% hoog      │   VOORRAADINZICHT                 │
 │  └───────────────────────────┘  ┌──────────────────────────────┐ │
-│                                  │ Product     │ Actueel │ Min  │ │
-│  PRODUCTIEPRESTATIE              │ Chocoladetab│    0    │ 100  │ │
-│  Output per uur:  142 stuks      │ Suiker (kg) │  -50    │ 200  │ │
-│  Afgekeurde btch: 2 (week)       │ Karamel-Z.  │ 2500    │ 100  │ │
-│  Doorlooptijd:    3,2 dagen      └──────────────────────────────┘ │
-│                                                                    │
+│                                 │ Product     │ Actueel │ Min  │ │
+│  PRODUCTIEPRESTATIE             │ Chocoladetab│    0    │ 100  │ │
+│  Output per uur:  142 stuks     │ Suiker (kg) │  -50    │ 200  │ │
+│  Afgekeurde btch: 2 (week)      │ Karamel-Z.  │ 2500    │ 100  │ │
+│  Doorlooptijd:    3,2 dagen     └──────────────────────────────┘ │
+│                                                                  │
 │  LEVERBETROUWBAARHEID LEVERANCIERS                               │
 │  Leverancier A: 96% op tijd    Leverancier B: 82% op tijd        │
 └──────────────────────────────────────────────────────────────────┘
@@ -682,24 +682,24 @@ BI-DASHBOARD SYSTEEM – DE CACAODROOM
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│  🍫 De Cacaodroom BI     [IT-Beheer]               [Logout]      │
+│   De Cacaodroom BI     [IT-Beheer]               [Logout]        │
 ├──────────────────────────────────────────────────────────────────┤
-│  > Beheerpaneel                                                   │
+│  > Beheerpaneel                                                  │
 ├─────────────────────────┬────────────────────────────────────────┤
 │  NAVIGATIE              │  GEBRUIKERSBEHEER                      │
 │  [Gebruikers]           │  ┌──────────────────────────────────┐  │
 │  [Databronnen]          │  │ Naam    │ Rol      │ Status      │  │
-│  [Alertinstellingen]    │  │ Thijs S.│ CEO      │ ✅ Actief   │  │
-│  [Auditlog]             │  │ Noah D. │ CFO      │ ✅ Actief   │  │
-│                         │  │ Dien A. │ COO      │ ✅ Actief   │  │
+│  [Alertinstellingen]    │  │ Thijs S.│ CEO      │  Actief     │  │
+│  [Auditlog]             │  │ Noah D. │ CFO      │  Actief     │  │
+│                         │  │ Dien A. │ COO      │  Actief     │  │
 │                         │  │ ...     │ ...      │ ...         │  │
 │                         │  └──────────────────────────────────┘  │
-│                         │  [+ Nieuwe gebruiker]  [Rollen beheren] │
+│                         │  [+ Nieuwe gebruiker]  [Rollen beheren]│
 │                         ├────────────────────────────────────────┤
 │                         │  DATABRONNEN                           │
-│                         │  Odoo ERP:  ✅ Verbonden (sync: 5 min) │
-│                         │  Odoo CRM:  ✅ Verbonden (sync: 5 min) │
-│                         │  Excel:     📥 Handmatige import        │
+│                         │  Odoo ERP:   Verbonden (sync: 5 min)   │
+│                         │  Odoo CRM:   Verbonden (sync: 5 min)   │
+│                         │  Excel:      Handmatige import         │
 │                         │  [Verbinding testen]  [Importeer CSV]  │
 └─────────────────────────┴────────────────────────────────────────┘
 ```
