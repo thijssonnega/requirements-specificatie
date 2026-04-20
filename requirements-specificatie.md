@@ -663,143 +663,37 @@ graph TD
 
 ## 8. Wireframes
 
-> **Toelichting:** De wireframes zijn schematische schetsen van de belangrijkste schermen van het BI-dashboard. Ze tonen de structuur en lay-out zonder definitief ontwerp of kleuren. De wireframes zijn beschikbaar als handgetekende schetsen (bijlage).
+> **Toelichting:** De wireframes zijn schematische schetsen van de belangrijkste schermen van het BI-dashboard. Ze tonen de structuur en lay-out zonder definitief ontwerp of kleuren. De wireframes zijn HTML based.
 
 ---
 
 ### Wireframe 1 – Login scherm
 
-```
-┌─────────────────────────────────────────────┐
-│                                             │
-│            DE CACAODROOM – BI Portal        │
-│                                             │
-│         ┌────────────────────────────┐      │
-│         │   Gebruikersnaam           │      │
-│         └────────────────────────────┘      │
-│                                             │
-│         ┌────────────────────────────┐      │
-│         │   Wachtwoord               │      │
-│         └────────────────────────────┘      │
-│                                             │
-│         [          Inloggen          ]      │
-│                                             │
-│         Wachtwoord vergeten?                │
-│                                             │
-└─────────────────────────────────────────────┘
-```
+<div style="background: #e8e8e8; padding: 40px 20px; border-radius: 0; margin: 20px 0;"><div style="max-width: 380px; margin: 0 auto; background: white; border-radius: 0; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); padding: 50px 35px; border: 1px solid #ddd;"><div style="text-align: center; margin-bottom: 35px;"><h2 style="font-size: 20px; color: #333; margin: 0 0 6px 0; font-weight: 700; letter-spacing: 0.5px;">DE CACAODROOM</h2><p style="font-size: 10px; color: #999; margin: 0; letter-spacing: 2px; font-weight: 600;">BI PORTAL</p></div><form><div style="margin-bottom: 18px;"><label style="display: block; font-size: 12px; color: #555; margin-bottom: 6px; font-weight: 500;">Gebruikersnaam</label><input type="text" placeholder=" " style="width: 100%; padding: 10px 12px; border: 1px solid #bbb; border-radius: 0; font-size: 13px; font-family: Arial, sans-serif; background: #fefefe; box-sizing: border-box; color: #333;"></div><div style="margin-bottom: 18px;"><label style="display: block; font-size: 12px; color: #555; margin-bottom: 6px; font-weight: 500;">Wachtwoord</label><input type="password" placeholder=" " style="width: 100%; padding: 10px 12px; border: 1px solid #bbb; border-radius: 0; font-size: 13px; font-family: Arial, sans-serif; background: #fefefe; box-sizing: border-box; color: #333;"></div><button type="submit" style="width: 100%; padding: 10px 15px; background: #888; color: white; border: 1px solid #666; border-radius: 0; font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 14px; font-family: Arial, sans-serif;">Inloggen</button></form><div style="text-align: center;"><a href="#" style="color: #666; text-decoration: none; font-size: 12px; font-family: Arial, sans-serif;">Wachtwoord vergeten?</a></div></div></div>
 
 ---
 
-### Wireframe 2 – Management Dashboard (Startscherm)
+### Wireframe 2 – Management Dashboard
 
-```
-───────────────────────────────────────────────────────────────────
-│  De Cacaodroom BI     [Management]         [Logout]  [Settings]  │
-├──────────────────────────────────────────────────────────────────┤
-│  Navigatie: [Home] [Financieel] [Productie] [Verkoop] [Service]  │
-├──────────┬──────────┬──────────┬──────────┬──────────────────────┤
-│ Omzet    │ Verspil- │ Klant-   │ Open     │                      │
-│ (maand)  │ ling (%) │ tevreden │ facturen │   [Export Rapport]   │
-│ €128.000 │  8,2% ▼  │  7,4/10  │  12 st.  │                      │
-│   ▲ +5%  │          │   ▲ +3%  │  ▼ -2    │                      │
-├──────────┴──────────┴──────────┴──────────┴──────────────────────┤
-│                                                                  │
-│   OMZETTREND – afgelopen 12 maanden                              │
-│   ┌───────────────────────────────────────────────────────┐      │
-│   │   [grafiek: lijndiagram omzet per maand]              |      │
-│   └───────────────────────────────────────────────────────┘      │
-│                                                                  │
-│   TOP PRODUCTEN (marge)          ALERTS                          │
-│   1. Karamel-Zeezout   28%      - Suiker: voorraad = -50         │
-│   2. Pure Tablet       24%      - Factuur #1042: 35 dagen open   │
-│   3. Melk Uitdeel      19%      + Productie binnen target        │
-│                                                                  │
-└──────────────────────────────────────────────────────────────────┘
-```
+<div style="background: #f5f5f5; padding: 20px; border-radius: 2px; margin: 20px 0; font-family: Arial, sans-serif; font-size: 12px;"><div style="background: white; border-radius: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"><div style="background: #ccc; color: #333; padding: 8px 12px; display: flex; justify-content: space-between; font-weight: 500; font-size: 11px;"><span>De Cacaodroom BI</span><span>[Logout] [Settings]</span></div><div style="background: #ddd; padding: 6px 12px; display: flex; gap: 15px; font-size: 11px;">[Home] [Financieel] [Productie] [Verkoop] [Service]</div><div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 16px; background: white; border-bottom: 1px solid #ddd;"><div style="background: #efefef; padding: 10px; border: 1px solid #ddd;"><div style="font-weight: 500; color: #333; font-size: 11px;">Omzet</div><div style="font-size: 14px; font-weight: 600; color: #333; margin: 4px 0;">€128.000</div><div style="color: #666; font-size: 10px;">+5%</div></div><div style="background: #efefef; padding: 10px; border: 1px solid #ddd;"><div style="font-weight: 500; color: #333; font-size: 11px;">Verspilling</div><div style="font-size: 14px; font-weight: 600; color: #333; margin: 4px 0;">8,2%</div><div style="color: #999; font-size: 10px;">Hoog</div></div><div style="background: #efefef; padding: 10px; border: 1px solid #ddd;"><div style="font-weight: 500; color: #333; font-size: 11px;">Tevredenheid</div><div style="font-size: 14px; font-weight: 600; color: #333; margin: 4px 0;">7,4/10</div><div style="color: #666; font-size: 10px;">+3%</div></div><div style="background: #efefef; padding: 10px; border: 1px solid #ddd;"><div style="font-weight: 500; color: #333; font-size: 11px;">Facturen open</div><div style="font-size: 14px; font-weight: 600; color: #333; margin: 4px 0;">12</div><div style="color: #999; font-size: 10px;">-2</div></div></div><div style="padding: 16px; background: white; border-bottom: 1px solid #ddd;"><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">OMZETTREND</div><div style="background: #f0f0f0; padding: 30px; border: 1px solid #ddd; text-align: center; color: #999; height: 100px; display: flex; align-items: center; justify-content: center; font-size: 11px;">[Chart]</div></div><div style="padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; background: white;"><div><div style="font-weight: 500; margin-bottom: 8px; color: #333; font-size: 11px;">TOP PRODUCTEN</div><div style="font-size: 11px; line-height: 1.6;"><div style="color: #666;">1. Karamel-Zeezout - 28%</div><div style="color: #666;">2. Pure Tablet - 24%</div><div style="color: #666;">3. Melk Uitdeel - 19%</div></div></div><div><div style="font-weight: 500; margin-bottom: 8px; color: #333; font-size: 11px;">ALERTS</div><div style="font-size: 11px; line-height: 1.6;"><div style="color: #666;">- Suiker: voorraad laag</div><div style="color: #666;">- Factuur #1042: open</div><div style="color: #666;">+ Productie OK</div></div></div></div></div></div>
 
 ---
 
 ### Wireframe 3 – Financieel Dashboard
 
-```
-┌───────────────────────────────────────────────────────────────────
-│  De Cacaodroom BI     [CFO - Noah]              [Logout]         │
-├──────────────────────────────────────────────────────────────────┤
-│  > Financieel Dashboard                                          │
-├──────────────────────────────────────────────────────────────────┤
-│  Filter: [Periode]        [Productlijn]         [Klantsegment]   │
-├──────────────────────────┬───────────────────────────────────────┤
-│  MARGE PER PRODUCTLIJN   │  CASHFLOW (12 maanden)                │
-│  ┌──────────────────────┐│  ┌───────────────────────────────┐    │
-│  │ [staafdiagram]       ││  │ [lijndiagram cashflow in/out] │    │
-│  │ Pure:      24%       ││  └───────────────────────────────┘    │
-│  │ Melk:      19%       │├───────────────────────────────────────┤
-│  │ Karamel:   28%       ││  OPENSTAANDE FACTUREN                 │
-│  └──────────────────────┘│  Totaal: €24.300                      │
-│                          │  > 30 dagen: 3 facturen (alert)       │
-│  MARGE PER KLANTSEGMENT  │  Gemiddelde betalingstermijn: 22 dgn  │
-│  Supermarkt:  22%        │                                       │
-│  Groothandel: 18%        │  [Exporteer rapport]                  │
-│  Speciaalzaak: 31%       │                                       │
-└──────────────────────────┴───────────────────────────────────────┘
-```
+<div style="background: #f5f5f5; padding: 20px; border-radius: 2px; margin: 20px 0; font-family: Arial, sans-serif; font-size: 12px;"><div style="background: white; border-radius: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"><div style="background: #ccc; color: #333; padding: 8px 12px; display: flex; justify-content: space-between; font-weight: 500; font-size: 11px;"><span>De Cacaodroom BI [CFO]</span><span>[Logout]</span></div><div style="padding: 12px; background: white; border-bottom: 1px solid #ddd; display: flex; gap: 10px;"><button style="padding: 6px 10px; background: #efefef; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; font-size: 11px;">Periode</button><button style="padding: 6px 10px; background: #efefef; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; font-size: 11px;">Productlijn</button><button style="padding: 6px 10px; background: #efefef; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; font-size: 11px;">Klantsegment</button></div><div style="padding: 16px; background: white; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;"><div><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">MARGE PER PRODUCTLIJN</div><div style="background: #f0f0f0; padding: 25px; border: 1px solid #ddd; text-align: center; color: #999; height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 11px;">[Chart]</div><div style="font-size: 11px; line-height: 1.6;"><div style="color: #666;">Pure: 24%</div><div style="color: #666;">Melk: 19%</div><div style="color: #666;">Karamel: 28%</div></div><div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #ddd;"><div style="font-weight: 500; margin-bottom: 6px; color: #333; font-size: 11px;">MARGE PER KLANTSEGMENT</div><div style="font-size: 11px; line-height: 1.6;"><div style="color: #666;">Supermarkt: 22%</div><div style="color: #666;">Groothandel: 18%</div><div style="color: #666;">Speciaalzaak: 31%</div></div></div></div><div><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">CASHFLOW</div><div style="background: #f0f0f0; padding: 25px; border: 1px solid #ddd; text-align: center; color: #999; height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 11px;">[Chart]</div><div style="background: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 2px;"><div style="font-weight: 500; margin-bottom: 6px; color: #333; font-size: 11px;">OPENSTAANDE FACTUREN</div><div style="font-size: 11px; line-height: 1.6; color: #666;"><div>Totaal: €24.300</div><div>> 30 dagen: 3</div><div>Gem. termijn: 22 dgn</div></div></div><button style="width: 100%; margin-top: 10px; padding: 6px; background: #999; color: white; border: none; border-radius: 2px; cursor: pointer; font-size: 11px;">Export</button></div></div></div></div>
 
 ---
 
 ### Wireframe 4 – Productie & Voorraad Dashboard
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│  De Cacaodroom BI     [COO - Dien]              [Logout]         │
-├──────────────────────────────────────────────────────────────────┤
-│  > Productie & Voorraad Dashboard                                │
-├──────────────────────────────────────────────────────────────────┤
-│  VERSPILLING PER BATCH          VOORRAAD ALERTS                  │
-│  ┌───────────────────────────┐  - Chocoladetablet:  voorraad 0   │
-│  │ [staafdiagram per batch]  │  - Suiker:           -50 (tekort) │
-│  │ Batch #21: 6,2% verspild  │  + Karamel-Zeezout: 2500 (hoog)   │
-│  │ Batch #22: 4,1% verspild  │                                   │
-│  │ Batch #23: 8,8% hoog      │   VOORRAADINZICHT                 │
-│  └───────────────────────────┘  ┌──────────────────────────────┐ │
-│                                 │ Product     │ Actueel │ Min  │ │
-│  PRODUCTIEPRESTATIE             │ Chocoladetab│    0    │ 100  │ │
-│  Output per uur:  142 stuks     │ Suiker (kg) │  -50    │ 200  │ │
-│  Afgekeurde btch: 2 (week)      │ Karamel-Z.  │ 2500    │ 100  │ │
-│  Doorlooptijd:    3,2 dagen     └──────────────────────────────┘ │
-│                                                                  │
-│  LEVERBETROUWBAARHEID LEVERANCIERS                               │
-│  Leverancier A: 96% op tijd    Leverancier B: 82% op tijd        │
-└──────────────────────────────────────────────────────────────────┘
-```
+<div style="background: #f5f5f5; padding: 20px; border-radius: 2px; margin: 20px 0; font-family: Arial, sans-serif; font-size: 12px;"><div style="background: white; border-radius: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);"><div style="background: #ccc; color: #333; padding: 8px 12px; display: flex; justify-content: space-between; font-weight: 500; font-size: 11px;"><span>De Cacaodroom BI [COO]</span><span>[Logout]</span></div><div style="padding: 16px; background: white; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;"><div><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">VERSPILLING PER BATCH</div><div style="background: #f0f0f0; padding: 25px; border: 1px solid #ddd; text-align: center; color: #999; height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 11px;">[Chart]</div><div style="font-size: 11px; line-height: 1.6;"><div style="color: #666;">Batch #21: 6,2%</div><div style="color: #666;">Batch #22: 4,1%</div><div style="color: #666;">Batch #23: 8,8%</div></div><div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #ddd;"><div style="font-weight: 500; margin-bottom: 6px; color: #333; font-size: 11px;">PRODUCTIEPRESTATIE</div><div style="font-size: 11px; line-height: 1.6; color: #666;"><div>Output/uur: 142 stuks</div><div>Afgekeurde: 2</div><div>Doorlooptijd: 3,2 days</div></div></div></div><div><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">VOORRAAD ALERTS</div><div style="background: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 2px; margin-bottom: 10px;"><div style="font-size: 11px; line-height: 1.6; color: #666;"><div>- Chocoladetablet: 0</div><div>- Suiker: -50 (tekort)</div><div>- Karamel-Z: 2500</div></div></div><div style="font-weight: 500; margin-bottom: 6px; color: #333; font-size: 11px;">VOORRAADINZICHT</div><table style="width: 100%; font-size: 10px; border-collapse: collapse;"><tr style="background: #efefef; border-bottom: 1px solid #ddd;"><td style="padding: 4px; font-weight: 500;">Product</td><td style="padding: 4px; font-weight: 500; text-align: right;">Actueel</td><td style="padding: 4px; font-weight: 500; text-align: right;">Min</td></tr><tr style="border-bottom: 1px solid #e0e0e0;"><td style="padding: 4px; color: #666;">Chocolade</td><td style="padding: 4px; text-align: right; color: #666;">0</td><td style="padding: 4px; text-align: right; color: #666;">100</td></tr><tr style="border-bottom: 1px solid #e0e0e0;"><td style="padding: 4px; color: #666;">Suiker (kg)</td><td style="padding: 4px; text-align: right; color: #666;">-50</td><td style="padding: 4px; text-align: right; color: #666;">200</td></tr><tr><td style="padding: 4px; color: #666;">Karamel-Z</td><td style="padding: 4px; text-align: right; color: #666;">2500</td><td style="padding: 4px; text-align: right; color: #666;">100</td></tr></table><div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;"><div style="font-weight: 500; margin-bottom: 4px; color: #333; font-size: 11px;">LEVERANCIERS</div><div style="font-size: 10px; line-height: 1.6; color: #666;"><div>Leverancier A: 96%</div><div>Leverancier B: 82%</div></div></div></div></div></div></div>
 
 ---
 
 ### Wireframe 5 – Beheer scherm (IT-beheerder)
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│   De Cacaodroom BI     [IT-Beheer]               [Logout]        │
-├──────────────────────────────────────────────────────────────────┤
-│  > Beheerpaneel                                                  │
-├─────────────────────────┬────────────────────────────────────────┤
-│  NAVIGATIE              │  GEBRUIKERSBEHEER                      │
-│  [Gebruikers]           │  ┌──────────────────────────────────┐  │
-│  [Databronnen]          │  │ Naam    │ Rol      │ Status      │  │
-│  [Alertinstellingen]    │  │ Thijs S.│ CEO      │  Actief     │  │
-│  [Auditlog]             │  │ Noah D. │ CFO      │  Actief     │  │
-│                         │  │ Dien A. │ COO      │  Actief     │  │
-│                         │  │ ...     │ ...      │ ...         │  │
-│                         │  └──────────────────────────────────┘  │
-│                         │  [+ Nieuwe gebruiker]  [Rollen beheren]│
-│                         ├────────────────────────────────────────┤
-│                         │  DATABRONNEN                           │
-│                         │  Odoo ERP:   Verbonden (sync: 5 min)   │
-│                         │  Odoo CRM:   Verbonden (sync: 5 min)   │
-│                         │  Excel:      Handmatige import         │
-│                         │  [Verbinding testen]  [Importeer CSV]  │
-└─────────────────────────┴────────────────────────────────────────┘
-```
+<div style="background: #f5f5f5; padding: 20px; border-radius: 2px; margin: 20px 0; font-family: Arial, sans-serif; font-size: 12px;"><div style="background: white; border-radius: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: grid; grid-template-columns: 160px 1fr;"><div style="background: #ddd; padding: 12px; border-right: 1px solid #ccc;"><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">NAVIGATIE</div><div style="display: flex; flex-direction: column; gap: 6px;"><button style="background: #ccc; color: #333; border: none; padding: 6px 8px; border-radius: 2px; text-align: left; cursor: pointer; font-size: 11px;">Gebruikers</button><button style="background: #ccc; color: #333; border: none; padding: 6px 8px; border-radius: 2px; text-align: left; cursor: pointer; font-size: 11px;">Databronnen</button><button style="background: #ccc; color: #333; border: none; padding: 6px 8px; border-radius: 2px; text-align: left; cursor: pointer; font-size: 11px;">Alerts</button><button style="background: #ccc; color: #333; border: none; padding: 6px 8px; border-radius: 2px; text-align: left; cursor: pointer; font-size: 11px;">Auditlog</button></div></div><div style="padding: 16px;"><div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">GEBRUIKERSBEHEER</div><table style="width: 100%; font-size: 11px; border-collapse: collapse; margin-bottom: 12px;"><tr style="background: #efefef; border-bottom: 1px solid #ddd;"><td style="padding: 6px; font-weight: 500;">Naam</td><td style="padding: 6px; font-weight: 500;">Rol</td><td style="padding: 6px; font-weight: 500;">Status</td></tr><tr style="border-bottom: 1px solid #e0e0e0;"><td style="padding: 6px; color: #666;">Thijs S.</td><td style="padding: 6px; color: #666;">CEO</td><td style="padding: 6px; color: #666;">Actief</td></tr><tr style="border-bottom: 1px solid #e0e0e0;"><td style="padding: 6px; color: #666;">Noah D.</td><td style="padding: 6px; color: #666;">CFO</td><td style="padding: 6px; color: #666;">Actief</td></tr><tr><td style="padding: 6px; color: #666;">Dien A.</td><td style="padding: 6px; color: #666;">COO</td><td style="padding: 6px; color: #666;">Actief</td></tr></table><div style="display: flex; gap: 6px; margin-bottom: 12px;"><button style="padding: 6px 10px; background: #999; color: white; border: none; border-radius: 2px; cursor: pointer; font-size: 11px;">+ Gebruiker</button><button style="padding: 6px 10px; background: #999; color: white; border: none; border-radius: 2px; cursor: pointer; font-size: 11px;">Rollen</button></div><div style="border-top: 1px solid #ddd; padding-top: 12px;"><div style="font-weight: 500; margin-bottom: 8px; color: #333; font-size: 11px;">DATABRONNEN</div><div style="font-size: 11px; line-height: 1.6;"><div style="background: #f9f9f9; padding: 6px 8px; border-left: 2px solid #999; margin-bottom: 4px;"><span style="color: #666;">Odoo ERP: Verbonden (5 min)</span></div><div style="background: #f9f9f9; padding: 6px 8px; border-left: 2px solid #999; margin-bottom: 4px;"><span style="color: #666;">Odoo CRM: Verbonden (5 min)</span></div><div style="background: #f9f9f9; padding: 6px 8px; border-left: 2px solid #999;"><span style="color: #666;">Excel: Handmatig</span></div></div><div style="display: flex; gap: 6px; margin-top: 8px;"><button style="padding: 6px 10px; background: #999; color: white; border: none; border-radius: 2px; cursor: pointer; font-size: 11px;">Testen</button><button style="padding: 6px 10px; background: #999; color: white; border: none; border-radius: 2px; cursor: pointer; font-size: 11px;">Import</button></div></div></div></div></div>
 
 ---
 
