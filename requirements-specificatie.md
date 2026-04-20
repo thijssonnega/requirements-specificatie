@@ -516,25 +516,25 @@ De onderstaande sitemap toont de architectuur van het BI-dashboardsysteem, met r
 
 ```mermaid
 graph TD
-    A["🔐 Login<br/>Authenticatie"] --> B["🏠 Startscherm<br/>Dashboard Hub"]
+    A[" Login<br/>Authenticatie"] --> B[" Startscherm<br/>Dashboard Hub"]
     
     B --> C{"👤 Gebruikersrol?"}
     
-    C -->|CEO / Management| D["📊 Management Dashboard<br/>Bedrijfsbreed KPI-overzicht"]
-    C -->|CFO / Finance| E["💰 Financieel Dashboard<br/>Marge & Cashflow Analyse"]
-    C -->|COO / Operations| F["⚙️ Productie & Voorraad<br/>Operationele Efficiency"]
-    C -->|CMO / Sales| G["📈 Verkoop & Marketing<br/>Revenue & Campagne Tracking"]
-    C -->|CHMO / Support| H["😊 Klantenservice Dashboard<br/>Customer Satisfaction"]
-    C -->|Sustainability Lead| I["♻️ Duurzaamheid Dashboard<br/>Sustainability Metrics"]
-    C -->|IT Beheerder| J["⚙️ Beheer & Admin<br/>Systeemconfiguratie"]
+    C -->|CEO / Management| D[" Management Dashboard<br/>Bedrijfsbreed KPI-overzicht"]
+    C -->|CFO / Finance| E[" Financieel Dashboard<br/>Marge & Cashflow Analyse"]
+    C -->|COO / Operations| F[" Productie & Voorraad<br/>Operationele Efficiency"]
+    C -->|CMO / Sales| G[" Verkoop & Marketing<br/>Revenue & Campagne Tracking"]
+    C -->|CHMO / Support| H["Klantenservice Dashboard<br/>Customer Satisfaction"]
+    C -->|Sustainability Lead| I["Duurzaamheid Dashboard<br/>Sustainability Metrics"]
+    C -->|IT Beheerder| J[" Beheer & Admin<br/>Systeemconfiguratie"]
     
-    D --> D1["📈 KPI's & Trends<br/>📋 Management rapportage<br/>📥 Export PDF/Excel"]
-    E --> E1["💵 Marge per productlijn<br/>💳 Cashflow overzicht<br/>📄 Factuurstatus"]
-    F --> F1["⚠️ Verspilling per batch<br/>📦 Voorraadinzicht<br/>🚚 Leverancier performance"]
-    G --> G1["🎯 Campagne ROI<br/>📊 Omzet trends<br/>🔮 Verkoopprognose"]
-    H --> H1["💬 Klachtenoverzicht<br/>⏱️ Responstijd<br/>⭐ Tevredenheid score"]
-    I --> I1["🌍 CO₂-voetafdruk<br/>⚡ Energieverbruik<br/>♻️ Retourgegevens"]
-    J --> J1["👥 Gebruikersbeheer<br/>🔗 Databronnen<br/>🚨 Alert instellingen<br/>📋 Auditlog"]
+    D --> D1[" KPI's & Trends<br/> Management rapportage<br/> Export PDF/Excel"]
+    E --> E1[" Marge per productlijn<br/> Cashflow overzicht<br/> Factuurstatus"]
+    F --> F1[" Verspilling per batch<br/> Voorraadinzicht<br/> Leverancier performance"]
+    G --> G1[" Campagne ROI<br/> Omzet trends<br/> Verkoopprognose"]
+    H --> H1[" Klachtenoverzicht<br/> Responstijd<br/> Tevredenheid score"]
+    I --> I1[" CO₂-voetafdruk<br/> Energieverbruik<br/> Retourgegevens"]
+    J --> J1[" Gebruikersbeheer<br/> Databronnen<br/> Alert instellingen<br/> Auditlog"]
     
     style A fill:#ff6b6b,color:#fff
     style B fill:#4ecdc4,color:#fff
