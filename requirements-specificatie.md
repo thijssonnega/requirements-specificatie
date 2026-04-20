@@ -510,57 +510,54 @@ Een user story is **volledig afgerond** als aan de volgende criteria is voldaan:
 
 ## 7. Sitemap
 
-De onderstaande sitemap toont de structuur van het BI-dashboardsysteem:
+### 7.1 Dashboard-structuur en Navigatie
 
+De onderstaande sitemap toont de architectuur van het BI-dashboardsysteem, met rollen-gebaseerde toegang en navigatiepad:
+
+```mermaid
+graph TD
+    A["🔐 Login<br/>Authenticatie"] --> B["🏠 Startscherm<br/>Dashboard Hub"]
+    
+    B --> C{"👤 Gebruikersrol?"}
+    
+    C -->|CEO / Management| D["📊 Management Dashboard<br/>Bedrijfsbreed KPI-overzicht"]
+    C -->|CFO / Finance| E["💰 Financieel Dashboard<br/>Marge & Cashflow Analyse"]
+    C -->|COO / Operations| F["⚙️ Productie & Voorraad<br/>Operationele Efficiency"]
+    C -->|CMO / Sales| G["📈 Verkoop & Marketing<br/>Revenue & Campagne Tracking"]
+    C -->|CHMO / Support| H["😊 Klantenservice Dashboard<br/>Customer Satisfaction"]
+    C -->|Sustainability Lead| I["♻️ Duurzaamheid Dashboard<br/>Sustainability Metrics"]
+    C -->|IT Beheerder| J["⚙️ Beheer & Admin<br/>Systeemconfiguratie"]
+    
+    D --> D1["📈 KPI's & Trends<br/>📋 Management rapportage<br/>📥 Export PDF/Excel"]
+    E --> E1["💵 Marge per productlijn<br/>💳 Cashflow overzicht<br/>📄 Factuurstatus"]
+    F --> F1["⚠️ Verspilling per batch<br/>📦 Voorraadinzicht<br/>🚚 Leverancier performance"]
+    G --> G1["🎯 Campagne ROI<br/>📊 Omzet trends<br/>🔮 Verkoopprognose"]
+    H --> H1["💬 Klachtenoverzicht<br/>⏱️ Responstijd<br/>⭐ Tevredenheid score"]
+    I --> I1["🌍 CO₂-voetafdruk<br/>⚡ Energieverbruik<br/>♻️ Retourgegevens"]
+    J --> J1["👥 Gebruikersbeheer<br/>🔗 Databronnen<br/>🚨 Alert instellingen<br/>📋 Auditlog"]
+    
+    style A fill:#ff6b6b,color:#fff
+    style B fill:#4ecdc4,color:#fff
+    style D fill:#1abc9c,color:#fff
+    style E fill:#3498db,color:#fff
+    style F fill:#e74c3c,color:#fff
+    style G fill:#f39c12,color:#fff
+    style H fill:#9b59b6,color:#fff
+    style I fill:#27ae60,color:#fff
+    style J fill:#95a5a6,color:#fff
 ```
-BI-DASHBOARD SYSTEEM – DE CACAODROOM
-│
-├── Login
-│   └── Inlogscherm (gebruikersnaam + wachtwoord)
-│
-├── Startscherm
-│   └── Persoonlijk welkomstscherm met snelkoppelingen
-│
-├── Management Dashboard
-│   ├── Bedrijfsbreed KPI-overzicht
-│   ├── Trendanalyse (grafieken per periode)
-│   └── Export managementrapportage (PDF / Excel)
-│
-├── Financieel Dashboard
-│   ├── Marge per productlijn
-│   ├── Marge per klantsegment
-│   ├── Cashflow overzicht
-│   └── Openstaande facturen & betalingsstatus
-│
-├── Productie & Voorraad Dashboard
-│   ├── Productieverspilling per batch
-│   ├── Productieprestatie (output per uur, afgekeurde batches)
-│   ├── Doorlooptijd per order
-│   ├── Voorraadinzicht (actueel, minimummelding)
-│   └── Leverbetrouwbaarheid per leverancier
-│
-├── Verkoop & Marketing Dashboard
-│   ├── Campagne-effectiviteit per klantsegment
-│   ├── Omzet per periode (dag / week / maand / kwartaal)
-│   ├── Seizoenspieken & verkoopprognose
-│   └── Klantenwinstgevendheid (marge per klant)
-│
-├── Klantenservice Dashboard
-│   ├── Klachtenoverzicht (categorie, volume, trend)
-│   ├── Gemiddelde responstijd
-│   └── Klanttevredenheidsscore
-│
-├── Duurzaamheid Dashboard
-│   ├── CO₂-uitstoot per batch
-│   ├── Energieverbruik per maand
-│   └── Retourpercentage per productlijn
-│
-└── Beheer (alleen IT-beheerder)
-    ├── Gebruikersbeheer (aanmaken, rollen, rechten)
-    ├── Databronbeheer (Odoo-koppeling, import Excel/CSV)
-    ├── Alertinstellingen (drempelwaarden)
-    └── Auditlog
-```
+
+### 7.2 Pagina-details
+
+| Dashboard | Doelgroep | Primaire KPI's | Visualisaties | Export |
+|---|---|---|---|---|
+| **Management** | CEO, Management | Omzet, winstmarge, CAC | Trends, heatmaps, gauges | PDF, Excel |
+| **Financieel** | CFO, Finance team | Marge per product, cashflow | Waterfall, bar charts | Excel, CSV |
+| **Productie & Voorraad** | COO, Production | Verspilling %, doorlooptijd | Line graphs, scatter plots | Report template |
+| **Verkoop & Marketing** | CMO, Sales team | Omzet, conversierate, ROI | Pie charts, trend lines | Performance report |
+| **Klantenservice** | CHMO, Support team | NPS, responstijd, klachten | Sentiment analysis, bar charts | Support report |
+| **Duurzaamheid** | Sustainability Lead | CO₂, energieverbruik, retour % | Gauge charts, area charts | Sustainability report |
+| **Beheer** | IT Administrator | System health, audit logs | Activity logs, user stats | Audit trail CSV |
 
 ---
 
