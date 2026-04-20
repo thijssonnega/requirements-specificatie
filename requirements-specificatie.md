@@ -518,7 +518,7 @@ De onderstaande sitemap toont de architectuur van het BI-dashboardsysteem, met r
 graph TD
     A[" Login<br/>Authenticatie"] --> B[" Startscherm<br/>Dashboard Hub"]
     
-    B --> C{"👤 Gebruikersrol?"}
+    B --> C{"Gebruikersrol"}
     
     C -->|CEO / Management| D[" Management Dashboard<br/>Bedrijfsbreed KPI-overzicht"]
     C -->|CFO / Finance| E[" Financieel Dashboard<br/>Marge & Cashflow Analyse"]
