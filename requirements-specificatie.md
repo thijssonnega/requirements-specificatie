@@ -73,17 +73,15 @@ De volgende SMART-doelstellingen zijn opgesteld voor de BI-implementatie:
 
 ### 1.6 Organogram
 
-```
-                  DE CACAODROOM
-                        |
-                  Thijs Sonnega
-                       CEO
-          ______________|________________________
-          |        |         |         |        |
-       Noah de    Dien      Samir   Zakaria  Ouail
-       Deugd      Ahouaoui  Mafuzur Ouzlig   Haddouch
-         CFO      COO       Rahman   CHMO      
-                            CMO
+Het onderstaande organogram toont de organisatiestructuur van De Cacaodroom:
+
+```mermaid
+graph TD
+    A[Thijs Sonnega<br/>CEO] --> B[Noah de Deugd<br/>CFO]
+    A --> C[Dien Ahouaoui<br/>COO]
+    A --> D[Samir Mafuzur Rahman<br/>CMO]
+    A --> E[Zakaria Ouzlig<br/>CHMO]
+    A --> F[Ouail Haddouch<br/>IT & Data]
 ```
 
 **Rollen:**
