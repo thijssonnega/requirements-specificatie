@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #e8e8e8; }
+      .card { fill: white; stroke: #ddd; stroke-width: 1; }
+      .header { fill: #333; font-size: 20px; font-weight: bold; }
+      .subheader { fill: #999; font-size: 10px; letter-spacing: 2px; }
+      .label { fill: #555; font-size: 12px; font-weight: 500; }
+      .input { fill: #fefefe; stroke: #bbb; stroke-width: 1; }
+      .button { fill: #888; stroke: #666; stroke-width: 1; fill-opacity: 0.9; }
+      .button-text { fill: white; font-size: 13px; font-weight: 600; }
+      .link { fill: #666; font-size: 12px; text-decoration: underline; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="400" height="350"/>
+  
+  <!-- Card -->
+  <rect class="card" x="50" y="40" width="300" height="270" rx="2"/>
+  
+  <!-- Header -->
+  <text class="header" x="200" y="75" text-anchor="middle">DE CACAODROOM</text>
+  <text class="subheader" x="200" y="92" text-anchor="middle">BI PORTAL</text>
+  
+  <!-- Username Field -->
+  <text class="label" x="70" y="122">Gebruikersnaam</text>
+  <rect class="input" x="70" y="128" width="260" height="25" rx="2"/>
+  
+  <!-- Password Field -->
+  <text class="label" x="70" y="172">Wachtwoord</text>
+  <rect class="input" x="70" y="178" width="260" height="25" rx="2"/>
+  
+  <!-- Login Button -->
+  <rect class="button" x="70" y="220" width="260" height="30" rx="2"/>
+  <text class="button-text" x="200" y="240" text-anchor="middle">Inloggen</text>
+  
+  <!-- Forgot Password Link -->
+  <text class="link" x="200" y="275" text-anchor="middle">Wachtwoord vergeten?</text>
+</svg>

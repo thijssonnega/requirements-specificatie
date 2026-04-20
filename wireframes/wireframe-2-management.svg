@@ -1,0 +1,65 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg-outer { fill: #f5f5f5; }
+      .bg-white { fill: white; }
+      .header-bar { fill: #ccc; }
+      .nav-bar { fill: #ddd; }
+      .kpi-box { fill: #efefef; stroke: #ddd; stroke-width: 1; }
+      .text-label { fill: #333; font-size: 11px; font-weight: 500; }
+      .text-value { fill: #333; font-size: 14px; font-weight: 600; }
+      .text-small { fill: #666; font-size: 10px; }
+      .chart-area { fill: #f0f0f0; stroke: #ddd; stroke-width: 1; }
+      .chart-text { fill: #999; font-size: 11px; }
+      .section-title { fill: #333; font-size: 11px; font-weight: 500; }
+    </style>
+  </defs>
+  
+  <rect class="bg-outer" width="600" height="400"/>
+  
+  <!-- Header -->
+  <rect class="header-bar" x="0" y="0" width="600" height="35"/>
+  <text class="text-label" x="20" y="22">De Cacaodroom BI</text>
+  <text class="text-label" x="500" y="22" text-anchor="end">[Logout] [Settings]</text>
+  
+  <!-- Navigation -->
+  <rect class="nav-bar" x="0" y="35" width="600" height="25"/>
+  <text class="text-small" x="20" y="52">[Home] [Financieel] [Productie] [Verkoop] [Service]</text>
+  
+  <!-- KPI Grid -->
+  <rect class="kpi-box" x="20" y="70" width="130" height="70"/>
+  <text class="text-label" x="30" y="85">Omzet</text>
+  <text class="text-value" x="30" y="105">€128.000</text>
+  <text class="text-small" x="30" y="130">+5%</text>
+  
+  <rect class="kpi-box" x="160" y="70" width="130" height="70"/>
+  <text class="text-label" x="170" y="85">Verspilling</text>
+  <text class="text-value" x="170" y="105">8,2%</text>
+  <text class="text-small" x="170" y="130">Hoog</text>
+  
+  <rect class="kpi-box" x="300" y="70" width="130" height="70"/>
+  <text class="text-label" x="310" y="85">Tevredenheid</text>
+  <text class="text-value" x="310" y="105">7,4/10</text>
+  <text class="text-small" x="310" y="130">+3%</text>
+  
+  <rect class="kpi-box" x="440" y="70" width="140" height="70"/>
+  <text class="text-label" x="450" y="85">Facturen open</text>
+  <text class="text-value" x="450" y="105">12</text>
+  <text class="text-small" x="450" y="130">-2</text>
+  
+  <!-- Chart Area -->
+  <text class="section-title" x="20" y="165">OMZETTREND</text>
+  <rect class="chart-area" x="20" y="175" width="560" height="80"/>
+  <text class="chart-text" x="300" y="220" text-anchor="middle">[Chart: Lijndiagram omzet]</text>
+  
+  <!-- Analytics Row -->
+  <text class="section-title" x="20" y="285">TOP PRODUCTEN</text>
+  <text class="text-small" x="20" y="305">1. Karamel-Zeezout - 28%</text>
+  <text class="text-small" x="20" y="325">2. Pure Tablet - 24%</text>
+  <text class="text-small" x="20" y="345">3. Melk Uitdeel - 19%</text>
+  
+  <text class="section-title" x="330" y="285">ALERTS</text>
+  <text class="text-small" x="330" y="305">- Suiker: voorraad laag</text>
+  <text class="text-small" x="330" y="325">- Factuur #1042: open</text>
+  <text class="text-small" x="330" y="345">+ Productie OK</text>
+</svg>

@@ -663,47 +663,37 @@ graph TD
 
 ## 8. Wireframes
 
-> **Toelichting:** De wireframes zijn schematische schetsen van de belangrijkste schermen van het BI-dashboard. Ze tonen de structuur en lay-out zonder definitief ontwerp of kleuren. De wireframes zijn beschikbaar als interactieve HTML-bestanden.
+> **Toelichting:** De wireframes zijn schematische schetsen van de belangrijkste schermen van het BI-dashboard. Ze tonen de structuur en lay-out zonder definitief ontwerp of kleuren. De wireframes zijn ingebed als SVG-afbeeldingen.
 
 ---
 
 ### Wireframe 1 – Login scherm
 
-[🔗 Open interactieve wireframe](wireframe-1-login.html)
-
-![Wireframe 1 - Login scherm](wireframes/wireframe-1-login.png)
+![Wireframe 1 - Login scherm](wireframes/wireframe-1-login.svg)
 
 ---
 
 ### Wireframe 2 – Management Dashboard
 
-[🔗 Open interactieve wireframe](wireframe-2-management.html)
-
-![Wireframe 2 - Management Dashboard](wireframes/wireframe-2-management.png)
+![Wireframe 2 - Management Dashboard](wireframes/wireframe-2-management.svg)
 
 ---
 
 ### Wireframe 3 – Financieel Dashboard
 
-[🔗 Open interactieve wireframe](wireframe-3-financieel.html)
-
-![Wireframe 3 - Financieel Dashboard](wireframes/wireframe-3-financieel.png)
+![Wireframe 3 - Financieel Dashboard](wireframes/wireframe-3-financieel.svg)
 
 ---
 
 ### Wireframe 4 – Productie & Voorraad Dashboard
 
-[🔗 Open interactieve wireframe](wireframe-4-productie.html)
-
-![Wireframe 4 - Productie & Voorraad Dashboard](wireframes/wireframe-4-productie.png)
+![Wireframe 4 - Productie & Voorraad Dashboard](wireframes/wireframe-4-productie.svg)
 
 ---
 
 ### Wireframe 5 – Beheer scherm (IT-beheerder)
 
-[🔗 Open interactieve wireframe](wireframe-5-beheer.html)
-
-![Wireframe 5 - Beheer scherm](wireframes/wireframe-5-beheer.png)
+![Wireframe 5 - Beheer scherm](wireframes/wireframe-5-beheer.svg)
 
 ---
 
