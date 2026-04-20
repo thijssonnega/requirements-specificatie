@@ -108,6 +108,24 @@ graph TD
 | Raad van Commissarissen | Opdrachtgever | Strategisch overzicht bedrijfsprestaties | Hoog | Periodieke managementrapportages |
 | Odoo (ERP/CRM leverancier) | Technische partner | Databron voor BI-integratie | Middel | API-koppeling documenteren |
 
+### 1.7.1 Stakeholder Power/Interest Matrix
+
+```mermaid
+graph TB
+    A["MANAGE CLOSELY<br/>Hoog belang, Hoge invloed<br/><br/>CEO Thijs<br/>CFO Noah<br/>COO Dien<br/>Raad van Commissarissen<br/><br/>Continue betrokkenheid<br/>Regelmatige afstemming<br/>Stuurinformatie bieden"] 
+    
+    B["KEEP SATISFIED<br/>Hoog belang, Lage invloed<br/><br/>Medewerkers<br/>CMO Samir<br/><br/>Aantrekkelijk dashboard<br/>Training & Support<br/>User experience prioriteit"]
+    
+    C["KEEP INFORMED<br/>Laag belang, Hoge invloed<br/><br/>IT-afdeling<br/>Ouail (IT & Data)<br/><br/>Regelmatige updates<br/>Technische ondersteuning<br/>Implementatie coördinatie"]
+    
+    D["MONITOR<br/>Laag belang, Lage invloed<br/><br/>CHMO Zakaria<br/>Odoo (leverancier)<br/><br/>Periodieke rapportages<br/>Status updates<br/>Minder frequent contact"]
+    
+    style A fill:#1abc9c,stroke:#0a543d,stroke-width:3px,color:#fff
+    style B fill:#3498db,stroke:#1a4a6a,stroke-width:3px,color:#fff
+    style C fill:#f39c12,stroke:#7a3d0a,stroke-width:3px,color:#fff
+    style D fill:#95a5a6,stroke:#2c3e50,stroke-width:3px,color:#fff
+```
+
 ---
 
 ## 2. Actoren van het Systeem
@@ -164,6 +182,29 @@ Er is geen centraal systeem met klantgegevens of klachthistorie. Medewerkers ste
 | Klantenservice | Geen klantdossier, geen klachtregistratie | Herhaling problemen, lage klanttevredenheid |
 | Rapportage | Elke afdeling eigen templates en KPI-definities | Geen "single source of truth", inconsistente cijfers |
 
+### 3.2.1 Oorzaken-Gevolgen Diagram
+
+```mermaid
+graph LR
+    A["Geen realtime<br/>inzichten"] --> D["Bedrijfsprocessen<br/>inefficiënt"]
+    B["Losse Excel<br/>bestanden"] --> D
+    C["Handmatige<br/>verwerking"] --> D
+    E["Geen integratie<br/>Odoo"] --> D
+    F["Verouderde<br/>datasilo's"] --> D
+    G["Inconsistente<br/>KPI-definitie"] --> D
+    
+    D --> H["Gevolg:<br/>Traag besluitvorming<br/>Fouten in processen<br/>Lage efficiëntie"]
+    
+    style H fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
+    style D fill:#f39c12,stroke:#d68910,stroke-width:2px,color:#fff
+    style A fill:#ecf0f1,stroke:#bdc3c7,stroke-width:2px
+    style B fill:#ecf0f1,stroke:#bdc3c7,stroke-width:2px
+    style C fill:#ecf0f1,stroke:#bdc3c7,stroke-width:2px
+    style E fill:#ecf0f1,stroke:#bdc3c7,stroke-width:2px
+    style F fill:#ecf0f1,stroke:#bdc3c7,stroke-width:2px
+    style G fill:#ecf0f1,stroke:#bdc3c7,stroke-width:2px
+```
+
 ---
 
 ### 3.3 Soll-Situatie (Gewenste Situatie – To Be)
@@ -213,6 +254,44 @@ Na implementatie van het BI-dashboardsysteem:
 | **Revenue Streams** | Kostenbesparing door efficiëntere rapportages (€8.000/jaar), minder verspilling in productie (€10.000/jaar), betere marges door datagestuurde sturing (€12.000/jaar) |
 | **Cost Factors** | Implementatie & consultancy (€30.000 eenmalig), licenties (€1.800/jaar), beheer & doorontwikkeling (€8.000/jaar) |
 | **Channels** | Intern webportaal toegankelijk via browser (desktop & tablet), integratie met bestaande Odoo-omgeving, e-mailnotificaties voor alerts en rapportages |
+
+### 4.2.1 Product Vision Board Diagram
+
+```mermaid
+graph TB
+    TG["Target Group<br/>Management & Afdelingen<br/>Dagelijks data-gebruikers"]
+    
+    N["Needs<br/>1. Realtime KPI's<br/>2. Single source of truth<br/>3. Self-service dashboards<br/>4. Automatische rapportages<br/>5. Duurzaamheidsdata"]
+    
+    V["Vision<br/>Geïntegreerd BI-dashboard<br/>met realtime inzichten voor<br/>datagedreven beslissingen"]
+    
+    P["Product<br/>Webgebaseerd BI-systeem<br/>gekoppeld aan Odoo<br/>met dashboards & alerts"]
+    
+    BG["Business Goals<br/>Rapportagetijd -50%<br/>Verspilling -10%<br/>Tevredenheid +15%<br/>Marge-inzicht 90%<br/>ROI binnen 1-2 jaar"]
+    
+    RS["Revenue Streams<br/>Efficiëntie: 8.000<br/>Verspilling: 10.000<br/>Marges: 12.000<br/>Totaal: 30.000/jr"]
+    
+    CH["Channels<br/>Webportaal<br/>Odoo-integratie<br/>Email-alerts"]
+    
+    COMP["Competitors<br/>Excel vs Tableau<br/>vs Qlik vs Looker<br/>Ons voordeel:<br/>Integratie + Kostenbesparing"]
+    
+    TG --> N
+    N --> V
+    V --> P
+    V --> BG
+    P --> CH
+    BG --> RS
+    COMP -.->V
+    
+    style V fill:#1abc9c,stroke:#0a543d,stroke-width:3px,color:#fff
+    style P fill:#3498db,stroke:#1a4a6a,stroke-width:2px,color:#fff
+    style BG fill:#27ae60,stroke:#0e4620,stroke-width:2px,color:#fff
+    style RS fill:#f39c12,stroke:#7a3d0a,stroke-width:2px,color:#fff
+    style TG fill:#ecf0f1,stroke:#bdc3c7,stroke-width:1px
+    style N fill:#ecf0f1,stroke:#bdc3c7,stroke-width:1px
+    style CH fill:#ecf0f1,stroke:#bdc3c7,stroke-width:1px
+    style COMP fill:#e74c3c,stroke:#c0392b,stroke-width:1px,color:#fff
+```
 
 ---
 
@@ -472,6 +551,29 @@ Zodat [doel/waarde]
 | US-13 | Beheer | Gebruikers en rollen beheren | 5 | Must Have |
 | US-14 | Beheer | Databronnen koppelen en beheren | 8 | Must Have |
 | **Totaal** | | | **94** | |
+
+### 5.9.1 Backlog Prioriteits- & Complexiteitsoverzicht
+
+```mermaid
+graph TB
+    MH["Must Have Stories<br/>8 stories = 53 punten<br/>US-01, US-02, US-03, US-04,<br/>US-05, US-06, US-11, US-13, US-14<br/><br/>Essentieel voor MVP<br/>Korte termijn implementatie"]
+    
+    SH["Should Have Stories<br/>3 stories = 18 punten<br/>US-07, US-08, US-10<br/><br/>Ondersteunend<br/>Medium termijn"]
+    
+    CH["Could Have Stories<br/>2 stories = 21 punten<br/>US-09, US-12<br/><br/>Nice-to-have<br/>Latere fasen"]
+    
+    MH --> T["Totale Backlog<br/>13 stories<br/>94 punten"]
+    SH --> T
+    CH --> T
+    
+    T --> P["Implementatie Strategie<br/>Sprint 1-3: Must Have<br/>Sprint 4-5: Should Have<br/>Sprint 6+: Could Have"]
+    
+    style MH fill:#27ae60,stroke:#0e4620,stroke-width:2px,color:#fff
+    style SH fill:#f39c12,stroke:#7a3d0a,stroke-width:2px,color:#fff
+    style CH fill:#e67e22,stroke:#a04000,stroke-width:2px,color:#fff
+    style T fill:#2c3e50,stroke:#1a252f,stroke-width:2px,color:#fff
+    style P fill:#1abc9c,stroke:#0a543d,stroke-width:2px,color:#fff
+```
 
 ---
 
@@ -734,3 +836,20 @@ graph TD
 ---
 
 *Requirements Specificatie – De Cacaodroom BI-Dashboard Systeem | Versie 1.0 | April 2026*
+
+---
+
+## MMM-label
+
+<img src="cyborg.svg" alt="MMM Label Cyborg" width="64" />
+
+Deze Requirements Specificatie is opgesteld door ons team De Cacaodroom. De inhoud hebben wij zelf geschreven met lichte assistentie van AI.
+
+Ter verbetering van de visuele presentatie en helderheid hebben wij een gedeelte AI toegepast:
+- Mermaid-diagrammen voor complexe processen en relaties
+- Verbeterde structurering en navigeerbaarheid
+- Professionele visuele hiërarchie
+
+**Betrokken partijen:** De Cacaodroom team (Thijs Sonnega, Noah de Deugd, Dien Ahouaoui, Samir Mafuzur Rahman, Zakaria Ouzlig, Ouail Haddouch)  
+**Onderwijsinstelling:** HU University of Applied Sciences, HBO-ICT (1e jaar, 2e semester)  
+**Datum:** April 2026
