@@ -45,6 +45,24 @@ body {
   gap: 10px;
 }
 
+.brand-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-logo-square {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 243, 232, 0.35);
+  box-shadow: 0 6px 18px rgba(21, 8, 4, 0.25);
+  object-fit: cover;
+  background: #f6ece2;
+  flex: 0 0 auto;
+}
+
 .brand-title {
   margin: 0;
   font-family: "Playfair Display", serif;
@@ -201,6 +219,17 @@ body {
   background: linear-gradient(160deg, #4d2015 0%, #6a3223 70%, #8c4b35 100%);
   color: #f9e7db;
   padding: 30px;
+}
+
+.login-logo-square {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  border: 1px solid rgba(247, 222, 204, 0.36);
+  box-shadow: 0 10px 24px rgba(24, 8, 4, 0.3);
+  object-fit: cover;
+  margin-bottom: 12px;
+  background: #f6ece2;
 }
 
 .login-hero h1 {
