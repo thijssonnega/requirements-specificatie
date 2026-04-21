@@ -1,33 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wireframe 1 – Login scherm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - De Cacaodroom BI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <script src="auth.js"></script>
 </head>
-<body style="margin: 0; padding: 20px; font-family: Arial, sans-serif; background: #f5f5f5;">
-    <h1>Wireframe 1 – Login scherm</h1>
-    <div style="background: #e8e8e8; padding: 40px 20px; border-radius: 0; margin: 20px 0;">
-        <div style="max-width: 380px; margin: 0 auto; background: white; border-radius: 0; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); padding: 50px 35px; border: 1px solid #ddd;">
-            <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 20px; color: #333; margin: 0 0 6px 0; font-weight: 700; letter-spacing: 0.5px;">DE CACAODROOM</h2>
-                <p style="font-size: 10px; color: #999; margin: 0; letter-spacing: 2px; font-weight: 600;">BI PORTAL</p>
-            </div>
-            <form>
-                <div style="margin-bottom: 18px;">
-                    <label style="display: block; font-size: 12px; color: #555; margin-bottom: 6px; font-weight: 500;">Gebruikersnaam</label>
-                    <input type="text" placeholder=" " style="width: 100%; padding: 10px 12px; border: 1px solid #bbb; border-radius: 0; font-size: 13px; font-family: Arial, sans-serif; background: #fefefe; box-sizing: border-box; color: #333;">
-                </div>
-                <div style="margin-bottom: 18px;">
-                    <label style="display: block; font-size: 12px; color: #555; margin-bottom: 6px; font-weight: 500;">Wachtwoord</label>
-                    <input type="password" placeholder=" " style="width: 100%; padding: 10px 12px; border: 1px solid #bbb; border-radius: 0; font-size: 13px; font-family: Arial, sans-serif; background: #fefefe; box-sizing: border-box; color: #333;">
-                </div>
-                <button type="submit" style="width: 100%; padding: 10px 15px; background: #888; color: white; border: 1px solid #666; border-radius: 0; font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 14px; font-family: Arial, sans-serif;">Inloggen</button>
-            </form>
-            <div style="text-align: center;">
-                <a href="#" style="color: #666; text-decoration: none; font-size: 12px; font-family: Arial, sans-serif;">Wachtwoord vergeten?</a>
-            </div>
+<body>
+  <main class="login-layout">
+    <section class="login-panel">
+      <div class="login-hero">
+        <h1>De Cacaodroom BI</h1>
+        <p>Proof de droom. Beleef de chocolade.</p>
+        <div class="script">Warm & Persoonlijk</div>
+        <div class="login-story">Elke rol heeft een eigen dashboard met alleen relevante KPI's en functies.</div>
+        <div class="login-story">Management, financieel, productie en IT-beheer werken vanuit dezelfde huisstijl.</div>
+        <div class="login-story">Toegang is role-based: geen toegang tot dashboards buiten de gekozen rol.</div>
+      </div>
+      <div class="login-form">
+        <h2>Inloggen</h2>
+        <p>Kies je rol om naar het juiste dashboard te gaan.</p>
+
+        <form id="loginForm">
+          <label class="field-label" for="gebruiker">Gebruikersnaam</label>
+          <input class="field" id="gebruiker" name="gebruiker" placeholder="bijv. noah.de.deugd" required>
+
+          <label class="field-label" for="wachtwoord">Wachtwoord</label>
+          <input class="field" id="wachtwoord" name="wachtwoord" type="password" placeholder="********" required>
+
+          <label class="field-label" for="rol">Rol</label>
+          <select class="field" id="rol" name="rol" required>
+            <option value="management">CEO / Management</option>
+            <option value="finance">CFO / Financieel</option>
+            <option value="operations">COO / Productie</option>
+            <option value="it">IT-beheerder</option>
+          </select>
+
+          <button class="button" type="submit">Inloggen naar eigen dashboard</button>
+        </form>
+
+        <div id="errorBox" class="role-note" style="display: none;"></div>
+
+        <div class="quick-links" aria-label="Snelkeuze demo">
+          <a href="#" data-role="management">Snel naar Management</a>
+          <a href="#" data-role="finance">Snel naar Financieel</a>
+          <a href="#" data-role="operations">Snel naar Productie</a>
+          <a href="#" data-role="it">Snel naar IT Beheer</a>
         </div>
+
+        <div style="margin-top:12px;">
+          <a href="index.html" class="pill-link alt" style="text-decoration:none;">Terug naar demo index</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-strip">
+      <span>Ambacht</span>
+      <span>Kwaliteit</span>
+      <span>Droom</span>
+      <span>Duurzaamheid</span>
+      <span>Passie</span>
     </div>
+  </main>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const errorBox = document.getElementById("errorBox");
+    const quickLinks = document.querySelectorAll("[data-role]");
+
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+    if (error === "toegang") {
+      errorBox.style.display = "block";
+      errorBox.textContent = "Je hebt geen toegang tot dat dashboard. Log in met de juiste rol.";
+    }
+    if (error === "rol") {
+      errorBox.style.display = "block";
+      errorBox.textContent = "Onbekende rol. Kies een geldige rol en probeer opnieuw.";
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const role = document.getElementById("rol").value;
+      redirectToRoleDashboard(role);
+    });
+
+    quickLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const role = link.getAttribute("data-role");
+        redirectToRoleDashboard(role);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,56 +1,129 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wireframe 3 – Financieel Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financieel Dashboard - De Cacaodroom BI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="auth.js"></script>
+  <script>requireRole("finance");</script>
 </head>
-<body style="margin: 0; padding: 20px; font-family: Arial, sans-serif; background: #f5f5f5;">
-    <h1>Wireframe 3 – Financieel Dashboard</h1>
-    <div style="background: #f5f5f5; padding: 20px; border-radius: 2px; margin: 20px 0; font-family: Arial, sans-serif; font-size: 12px;">
-        <div style="background: white; border-radius: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-            <div style="background: #ccc; color: #333; padding: 8px 12px; display: flex; justify-content: space-between; font-weight: 500; font-size: 11px;">
-                <span>De Cacaodroom BI [CFO]</span>
-                <span>[Logout]</span>
-            </div>
-            <div style="padding: 12px; background: white; border-bottom: 1px solid #ddd; display: flex; gap: 10px;">
-                <button style="padding: 6px 10px; background: #efefef; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; font-size: 11px;">Periode</button>
-                <button style="padding: 6px 10px; background: #efefef; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; font-size: 11px;">Productlijn</button>
-                <button style="padding: 6px 10px; background: #efefef; border: 1px solid #ccc; border-radius: 2px; cursor: pointer; font-size: 11px;">Klantsegment</button>
-            </div>
-            <div style="padding: 16px; background: white; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <div>
-                    <div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">MARGE PER PRODUCTLIJN</div>
-                    <div style="background: #f0f0f0; padding: 25px; border: 1px solid #ddd; text-align: center; color: #999; height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 11px;">[Chart]</div>
-                    <div style="font-size: 11px; line-height: 1.6;">
-                        <div style="color: #666;">Pure: 24%</div>
-                        <div style="color: #666;">Melk: 19%</div>
-                        <div style="color: #666;">Karamel: 28%</div>
-                    </div>
-                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #ddd;">
-                        <div style="font-weight: 500; margin-bottom: 6px; color: #333; font-size: 11px;">MARGE PER KLANTSEGMENT</div>
-                        <div style="font-size: 11px; line-height: 1.6;">
-                            <div style="color: #666;">Supermarkt: 22%</div>
-                            <div style="color: #666;">Groothandel: 18%</div>
-                            <div style="color: #666;">Speciaalzaak: 31%</div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div style="font-weight: 500; margin-bottom: 10px; color: #333; font-size: 11px;">CASHFLOW</div>
-                    <div style="background: #f0f0f0; padding: 25px; border: 1px solid #ddd; text-align: center; color: #999; height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 11px;">[Chart]</div>
-                    <div style="background: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 2px;">
-                        <div style="font-weight: 500; margin-bottom: 6px; color: #333; font-size: 11px;">OPENSTAANDE FACTUREN</div>
-                        <div style="font-size: 11px; line-height: 1.6; color: #666;">
-                            <div>Totaal: €24.300</div>
-                            <div>> 30 dagen: 3</div>
-                            <div>Gem. termijn: 22 dgn</div>
-                        </div>
-                    </div>
-                    <button style="width: 100%; margin-top: 10px; padding: 6px; background: #999; color: white; border: none; border-radius: 2px; cursor: pointer; font-size: 11px;">Export</button>
-                </div>
-            </div>
+<body>
+  <div class="page-wrap">
+    <header class="brand-bar">
+      <div>
+        <h1 class="brand-title">De Cacaodroom BI - Financieel Dashboard</h1>
+        <p class="brand-sub">Rol: <span id="roleLabel"></span> | Bron: Odoo ERP & CRM</p>
+      </div>
+      <div class="script">Luxe met een glimlach</div>
+    </header>
+
+    <nav class="nav-pills">
+      <a class="pill-link" href="wireframe-3-financieel.html?role=finance">Financieel</a>
+      <a class="pill-link alt" href="index.html">Demo index</a>
+      <a class="pill-link alt" href="wireframe-1-login.html">Naar login</a>
+      <button id="logoutBtn" class="button alt" type="button">Uitloggen</button>
+    </nav>
+
+    <section class="card" style="margin-bottom:10px; display:flex; gap:8px; flex-wrap:wrap;">
+      <select class="field" style="max-width:220px; margin:0;">
+        <option>Periode: Maand</option>
+        <option>Kwartaal</option>
+        <option>Jaar</option>
+      </select>
+      <select class="field" style="max-width:220px; margin:0;">
+        <option>Productlijn: Alles</option>
+        <option>Pure</option>
+        <option>Melk</option>
+        <option>Karamel</option>
+      </select>
+      <select class="field" style="max-width:220px; margin:0;">
+        <option>Klantsegment: Alles</option>
+        <option>Supermarkt</option>
+        <option>Groothandel</option>
+        <option>Speciaalzaak</option>
+      </select>
+    </section>
+
+    <section class="kpi-grid">
+      <article class="card">
+        <div class="kpi-label">Gemiddelde marge productportfolio</div>
+        <div class="kpi-value">23.7%</div>
+        <div class="kpi-meta ok">+1.1% versus vorige maand</div>
+      </article>
+      <article class="card">
+        <div class="kpi-label">Openstaande facturen</div>
+        <div class="kpi-value">EUR 24.300</div>
+        <div class="kpi-meta danger">3 facturen ouder dan 30 dagen</div>
+      </article>
+      <article class="card">
+        <div class="kpi-label">Gemiddelde betalingstermijn</div>
+        <div class="kpi-value">22 dagen</div>
+        <div class="kpi-meta">Doel: max 21 dagen</div>
+      </article>
+    </section>
+
+    <section class="layout-2">
+      <article class="card">
+        <h2 class="section-title">Marge per productlijn en segment</h2>
+        <canvas id="margeChart" height="130"></canvas>
+      </article>
+      <article class="card">
+        <h2 class="section-title">Cashflow trend (12 maanden)</h2>
+        <canvas id="cashflowChart" height="130"></canvas>
+        <div class="role-note">Factuuralert: F-1042, F-1048 en F-1061 staan langer dan 30 dagen open.</div>
+        <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+          <button class="button" type="button">Exporteer PDF</button>
+          <button class="button alt" type="button">Exporteer Excel</button>
         </div>
+      </article>
+    </section>
+
+    <div class="footer-strip">
+      <span>Ambacht</span>
+      <span>Kwaliteit</span>
+      <span>Droom</span>
+      <span>Duurzaamheid</span>
+      <span>Passie</span>
     </div>
+  </div>
+
+  <script>
+    document.getElementById("roleLabel").textContent = roleLabel(getRole());
+    setupLogout("logoutBtn");
+
+    new Chart(document.getElementById("margeChart"), {
+      type: "bar",
+      data: {
+        labels: ["Pure", "Melk", "Karamel"],
+        datasets: [
+          { label: "Supermarkt", data: [22, 18, 20], backgroundColor: "#b06a28" },
+          { label: "Groothandel", data: [19, 15, 17], backgroundColor: "#d39f67" },
+          { label: "Speciaalzaak", data: [31, 26, 33], backgroundColor: "#914840" }
+        ]
+      },
+      options: { responsive: true, scales: { y: { beginAtZero: true, max: 40 } } }
+    });
+
+    new Chart(document.getElementById("cashflowChart"), {
+      type: "line",
+      data: {
+        labels: ["Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec", "Jan", "Feb", "Mrt", "Apr"],
+        datasets: [{
+          label: "Cashflow (x EUR 1.000)",
+          data: [8, 11, 9, 13, 10, 15, 17, 20, 16, 21, 18, 24],
+          borderColor: "#4d2015",
+          backgroundColor: "rgba(77, 32, 21, 0.16)",
+          fill: true,
+          tension: 0.28
+        }]
+      },
+      options: { plugins: { legend: { display: false } } }
+    });
+  </script>
 </body>
 </html>
